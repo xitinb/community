@@ -1,0 +1,31 @@
+2021-03-30 22:55:12.700  INFO 13716 --- [restartedMain] com.seer.SeerblogApplication             : Starting SeerblogApplication on PC-20170621WOWM with PID 13716 (D:\IdeaProjects\seerblog\target\classes started by Administrator in D:\IdeaProjects\seerblog)
+2021-03-30 22:55:12.702  INFO 13716 --- [restartedMain] com.seer.SeerblogApplication             : The following profiles are active: pro
+2021-03-30 22:55:17.187  WARN 13716 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.seer]' package. Please check your configuration.
+2021-03-30 22:55:31.765  WARN 13716 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 22:55:32.564  WARN 13716 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-03-30 22:55:33.182 ERROR 13716 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2021-03-30 22:56:07.823  INFO 14312 --- [restartedMain] com.seer.SeerblogApplication             : Starting SeerblogApplication on PC-20170621WOWM with PID 14312 (D:\IdeaProjects\seerblog\target\classes started by Administrator in D:\IdeaProjects\seerblog)
+2021-03-30 22:56:07.829  INFO 14312 --- [restartedMain] com.seer.SeerblogApplication             : The following profiles are active: pro
+2021-03-30 22:56:09.009  WARN 14312 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.seer]' package. Please check your configuration.
+2021-03-30 22:56:11.075  WARN 14312 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 22:56:11.333  WARN 14312 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-03-30 22:56:11.626  INFO 14312 --- [restartedMain] com.seer.SeerblogApplication             : Started SeerblogApplication in 4.645 seconds (JVM running for 6.93)
+2021-03-30 22:56:31.667  INFO 13308 --- [restartedMain] com.seer.SeerblogApplication             : Starting SeerblogApplication on PC-20170621WOWM with PID 13308 (D:\IdeaProjects\seerblog\target\classes started by Administrator in D:\IdeaProjects\seerblog)
+2021-03-30 22:56:31.689  INFO 13308 --- [restartedMain] com.seer.SeerblogApplication             : The following profiles are active: pro
+2021-03-30 22:56:32.808  WARN 13308 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.seer]' package. Please check your configuration.
+2021-03-30 22:56:34.508  WARN 13308 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-30 22:56:34.917  WARN 13308 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-03-30 22:56:35.203  INFO 13308 --- [restartedMain] com.seer.SeerblogApplication             : Started SeerblogApplication in 4.724 seconds (JVM running for 7.717)
