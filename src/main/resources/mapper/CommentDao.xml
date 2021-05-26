@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.seer.dao.CommentDao">
+
+<!--    <select id="testquery" resultType="com.seer.entity.queryvo.Comment">-->
+<!--        select * from community.t_comment;-->
+<!--    </select>-->
+
+    <!--通过帖子id查询出父id不为空的回复列表（一级回复）-->
+    <select id="findByPostingIdParentIdNotNull" resultType="com.seer.entity.queryvo.Comment">
+        select c.id,c.user_id,c.content,c.create_time,c.posting_id,c.parent_comment_id,c.user_comment,u.username,u.avatar
+        from community.t_comment c,community.t_user u
+        where c.posting_id = #{postingId} and c.parent_comment_id =#{id} and c.user_id = u.id
+         order by c.create_time asc
+    </select>
+
+<!--通过帖子id查询出父id为空的评论列表-->
+    <select id="findByPostingIdParentIdNUll" resultType="com.seer.entity.queryvo.Comment">
+        select c.id,c.user_id,c.content,c.create_time,c.posting_id,c.parent_comment_id,c.user_comment,u.username,u.avatar
+        from community.t_comment c,community.t_user u
+        where c.posting_id = #{postingId} and c.parent_comment_id =#{postingParentId} and c.user_id = u.id
+         order by c.create_time asc
+    </select>
+
+
+<!-- 查询二级子评论-->
+    <select id="findByPostingIdAndReplayId" resultType="com.seer.entity.queryvo.Comment">
+        select c.id,c.user_id,c.content,c.create_time,c.posting_id,c.parent_comment_id,c.user_comment,u.username,u.avatar
+        from community.t_comment c,community.t_user u
+        where c.posting_id =#{postingId} and c.parent_comment_id =#{childId} and c.user_id = u.id
+        order by c.create_time asc
+    </select>
+
+<!--新增保存评论-->
+    <insert id="saveComment" parameterType="com.seer.entity.InsertComment">
+        insert into community.t_comment(content,create_time,posting_id,parent_comment_id,user_comment,user_id)
+        values (#{content},#{createTime},#{postingId},#{parentCommentId},#{userComment},#{userId});
+    </insert>
+<!-- 删除评论-->
+    <delete id="deleteComment">
+        delete from community.t_comment where id =#{id};
+    </delete>
+</mapper>
